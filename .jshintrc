@@ -1,0 +1,8 @@
+{
+  "asi": true,
+  "node": true,
+  "newcap": false,
+  "mocha": true,
+  "undef": true,
+  "unused": true
+}

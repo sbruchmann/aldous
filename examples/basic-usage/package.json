@@ -1,0 +1,9 @@
+{
+  "name": "aldous-example",
+  "version": "1.0.0",
+  "description": "Demonstrates the basic usage of Aldous",
+  "private": true,
+  "dependencies": {
+    "aldous": "^1.0.0"
+  }
+}

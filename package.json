@@ -1,0 +1,29 @@
+{
+  "name": "aldous",
+  "version": "1.0.0",
+  "description": "Static site generator",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/jshint/bin/jshint index.js test.js",
+    "test": "./node_modules/mocha/bin/mocha test.js -R min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbruchmann/aldous.git"
+  },
+  "keywords": [
+    "static",
+    "site",
+    "generator"
+  ],
+  "author": "Steffen Bruchmann <hi@sbruchmann.me> (http://sbruchmann.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbruchmann/aldous/issues"
+  },
+  "homepage": "https://github.com/sbruchmann/aldous#readme",
+  "dependencies": {
+    "dot-prop": "^2.2.0",
+    "ware": "^1.3.0"
+  }
+}
