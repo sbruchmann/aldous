@@ -18,6 +18,21 @@ Aldous.prototype.get = function get(name) {
   return prop.get(this._props, name)
 }
 
+Aldous.prototype.has = function has(name) {
+  var props = this._props
+  var key, path
+
+  if (name.indexOf('.') === -1) {
+    return props.hasOwnProperty(name)
+  }
+
+  path = name.split('.')
+  key = path.pop()
+  props = this.get(path.join('.'))
+
+  return props && props.hasOwnProperty(key)
+}
+
 Aldous.prototype.set = function set(name, value) {
   var self = this
   if (typeof name === 'string') {

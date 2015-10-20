@@ -32,6 +32,12 @@ describe('Aldous', function() {
     })
   })
 
+  describe('#has', function() {
+    it('returns true if the requested property is defined', function() {
+      expect(this.aldous.has('deeply.nested.property')).to.equal(true)
+    })
+  })
+
   describe('#set', function() {
     it('sets the value of a property', function() {
       var actual, expected
