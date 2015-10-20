@@ -2,6 +2,14 @@ Changelog
 =========
 
 
+1.1.1
+-----
+
+### Changes
+
+  - Clarified intent of Aldous. (Version bump needed for publishing on npm)
+
+
 1.1.0
 -----
 
