@@ -33,6 +33,11 @@ Aldous.prototype.has = function has(name) {
   return props && props.hasOwnProperty(key)
 }
 
+Aldous.prototype.run = function run(input, callback) {
+  this._plugins.run(input, this, callback)
+  return this
+}
+
 Aldous.prototype.set = function set(name, value) {
   var self = this
   if (typeof name === 'string') {
@@ -42,11 +47,6 @@ Aldous.prototype.set = function set(name, value) {
       self.set(key, name[key])
     })
   }
-  return this
-}
-
-Aldous.prototype.run = function run(input, callback) {
-  this._plugins.run(input, this, callback)
   return this
 }
 
