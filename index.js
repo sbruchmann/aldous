@@ -50,6 +50,18 @@ Aldous.prototype.run = function run(input, callback) {
   return this
 }
 
+Aldous.prototype.toJSON = function toJSON() {
+  return JSON.parse(JSON.stringify(this._props))
+}
+
+Aldous.prototype.toObject = function toObject() {
+  return this._props
+}
+
+Aldous.prototype.toString = function toString() {
+  return JSON.stringify(this._props)
+}
+
 Aldous.prototype.use = function use(plugin) {
   this._plugins.use(plugin)
   return this

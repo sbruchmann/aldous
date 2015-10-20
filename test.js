@@ -68,6 +68,24 @@ describe('Aldous', function() {
     })
   })
 
+  describe('#toJSON', function() {
+    it('serializes properties as JSON', function() {
+      expect(this.aldous.toJSON()).to.be.an('object')
+    })
+  })
+
+  describe('#toObject', function() {
+    it('serializes properties as an object', function() {
+      expect(this.aldous.toObject()).to.equal(this.props)
+    })
+  })
+
+  describe('#toString', function() {
+    it('serializes properties as a string', function() {
+      expect(this.aldous.toString()).to.be.equal(JSON.stringify(this.props))
+    })
+  })
+
   describe("#use", function() {
     it('should mount a plugin', function() {
       var fn = function() {}
