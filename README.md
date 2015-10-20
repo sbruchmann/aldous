@@ -7,7 +7,7 @@ Static site generator.
 Overview
 --------
 
-Aldous is a bare bones static site generator that doesn’t rely on file I/O. It is designed to be used as a backend for CLI and/or GUI applications. Its architecture is highly inspired by [Metalsmith](http://www.metalsmith.io/).
+Aldous is a _backend_ for static site generators that doesn’t rely on any file I/O. Its architecture is highly inspired by [Metalsmith](http://www.metalsmith.io/).
 
 
 Installation

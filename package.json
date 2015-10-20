@@ -1,7 +1,7 @@
 {
   "name": "aldous",
   "version": "1.1.0",
-  "description": "Static site generator",
+  "description": "Static site generator backend",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/jshint/bin/jshint index.js test.js",
