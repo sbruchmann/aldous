@@ -30,6 +30,13 @@ describe('Aldous', function() {
       var expected = this.props.deeply.nested.property
       expect(actual).to.equal(expected)
     })
+
+    it('returns a default value if needed', function() {
+      var actual = this.aldous.get('non.existent.property', 'defaultValue')
+      var expected = 'defaultValue'
+
+      expect(actual).to.equal(expected)
+    })
   })
 
   describe('#has', function() {

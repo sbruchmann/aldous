@@ -15,8 +15,16 @@ function Aldous(props) {
   return this
 }
 
-Aldous.prototype.get = function get(name) {
-  return prop.get(this._props, name)
+Aldous.prototype.get = function get(name, defaultValue) {
+  var retval = null
+
+  if (this.has(name)) {
+    retval = prop.get(this._props, name)
+  } else {
+    retval = defaultValue
+  }
+
+  return retval
 }
 
 Aldous.prototype.has = function has(name) {
