@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.2.0
+-----
+
+### Changes
+
+  - `Aldous#get` can now return a default value if the requested property is undefined
+  - `Aldous#run` now returns a promise if no callback was specified
+
 
 1.1.1
 -----
