@@ -116,5 +116,28 @@ describe('Aldous', function() {
           done()
         })
     })
+
+    it('should return a promise when no callback was passed', function(done) {
+      var count = 0
+      this.aldous
+        .use(function(input, aldous, next) {
+          setImmediate(next)
+          count += 1
+        })
+        .use(function(input, aldous, next) {
+          setImmediate(next)
+          count += 1
+        })
+        .use(function(input, aldous, next) {
+          setImmediate(next)
+          count += 1
+        })
+        .run([])
+        .then(function callback() {
+          expect(count).to.equal(3)
+          done()
+        })
+        .catch(done)
+    })
   })
 })

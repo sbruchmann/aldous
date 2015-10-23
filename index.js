@@ -1,5 +1,6 @@
 'use strict';
 
+var Promise = require('bluebird')
 var prop = require('dot-prop')
 var ware = require('ware')
 
@@ -34,8 +35,16 @@ Aldous.prototype.has = function has(name) {
 }
 
 Aldous.prototype.run = function run(input, callback) {
-  this._plugins.run(input, this, callback)
-  return this
+  var runAsync = Promise.promisify(this._plugins.run.bind(this._plugins))
+  var promise = runAsync(input, this)
+  var retval = promise
+
+  if (callback) {
+    retval = this
+    promise.nodeify(callback)
+  }
+
+  return retval
 }
 
 Aldous.prototype.set = function set(name, value) {
