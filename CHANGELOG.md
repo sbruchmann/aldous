@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.2.1
+-----
+
+### Fixes
+
+ - `Aldous#run`: Fix signature of callback function
+
 1.2.0
 -----
 
