@@ -49,7 +49,11 @@ Aldous.prototype.run = function run(input, callback) {
 
   if (callback) {
     retval = this
-    promise.nodeify(callback)
+    promise
+      .then(function done(output) {
+        callback(null, output)
+      })
+      .catch(callback)
   }
 
   return retval
