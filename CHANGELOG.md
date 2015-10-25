@@ -1,20 +1,22 @@
 Changelog
 =========
 
+*Note: Gaps between patch versions are faulty, broken or test releases.*
+
+-1.2.3
+-------
+
+### Fixes
+
+  - `Aldous#run`: Fix signature of callback function
+
+
 1.2.2
 -----
 
 ### Fixes
 
   - `package.json`: Add missing `devDependencies`
-
-
-1.2.1
------
-
-### Fixes
-
-  - `Aldous#run`: Fix signature of callback function
 
 
 1.2.0

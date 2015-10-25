@@ -1,6 +1,6 @@
 {
   "name": "aldous",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Static site generator backend",
   "main": "index.js",
   "scripts": {
