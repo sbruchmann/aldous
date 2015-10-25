@@ -50,8 +50,8 @@ Aldous.prototype.run = function run(input, callback) {
   if (callback) {
     retval = this
     promise
-      .then(function done(output) {
-        callback(null, output)
+      .then(function done(response) {
+        callback(null, response[0], response[1])
       })
       .catch(callback)
   }

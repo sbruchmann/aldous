@@ -103,8 +103,9 @@ describe('Aldous', function() {
 
   describe('#run', function() {
     it('should run all plugins', function(done) {
+      var aldous = this.aldous
       var count = 0
-      this.aldous
+      aldous
         .use(function(input, aldous, next) {
           setImmediate(next)
           count += 1
@@ -117,9 +118,12 @@ describe('Aldous', function() {
           setImmediate(next)
           count += 1
         })
-        .run([], function callback(err) {
+        .run([], function callback(err, output, $) {
           if (err) return done(err)
           expect(count).to.equal(3)
+          expect(output).to.be.an('array')
+          expect(output).to.have.length(0)
+          expect($).to.equal(aldous)
           done()
         })
     })
